@@ -1,0 +1,94 @@
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --second-bcg-color: #2f303a;
+  --thirdy-bcg-color: #f5f4fa;
+  --primary-white-color: #ffffff;
+  --secondary-white-color: rgba(255, 255, 255, 0.6);
+  --primary-black-color: #000000;
+  --btn-color: #188ce8;
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+}
+
+.markers {
+  list-style: none;
+}
+.logo {
+  font-size: 26px;
+}
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+
+.logo-web {
+  color: var(--accent-color);
+}
+.logo-studio-head {
+  color: var(--primary-black-color);
+}
+
+.header .link:hover,
+.header .link:focus {
+  color: var(--accent-color);
+}
+
+.contacts-list .link {
+  color: var(--secondary-text-color);
+}
+
+/* Hero section */
+
+.hero {
+  background-color: var(--second-bcg-color);
+  color: var(--primary-white-color);
+}
+
+.hero-title {
+}
+
+.hero-btn {
+  color: var(--primary-white-color);
+  background-color: var(--btn-color);
+}
+
+/* Feature section */
+
+.feature-item-title {
+}
+
+.feature-item-text {
+  color: var(--secondary-text-color);
+}
+
+/* Activities section */
+
+/* Team WebStudio */
+
+.teammate-profession {
+  color: var(--secondary-text-color);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--second-bcg-color);
+}
+
+.logo-studio-footer {
+  color: var(--primary-white-color);
+}
+
+.physical-address {
+  color: var(--primary-white-color);
+}
+
+.address.link {
+  color: var(--secondary-white-color);
+}
