@@ -11,13 +11,20 @@
 }
 
 body {
-  color: var(--primary-text-color);
-  background-color: var(--primary-white-color);
-
   font-family: Roboto, sans-serif;
   font-size: 14px;
-  font-weight: 400;
   letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+}
+
+.hidden-title {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  white-space: nowrap;
 }
 
 .markers {
@@ -51,11 +58,6 @@ body {
 
 .logo-studio-head {
   color: var(--primary-black-color);
-}
-
-.header .link:hover,
-.header .link:focus {
-  color: var(--accent-color);
 }
 
 .nav-list,
@@ -93,6 +95,7 @@ body {
   letter-spacing: 0.06em;
 
   background-color: var(--btn-color);
+  cursor: pointer;
 }
 
 /* Feature section */
@@ -106,7 +109,6 @@ body {
 
 .feature-item-text {
   color: var(--secondary-text-color);
-  font-family: Roboto;
   line-height: 1.71;
 }
 
@@ -147,4 +149,42 @@ body {
 
 .address.link {
   color: var(--secondary-white-color);
+}
+
+/* Portfolio html */
+
+/* Main section */
+
+.project-filter .btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  cursor: pointer;
+}
+
+.project-filter .btn:hover,
+.project-filter .btn.focus {
+  color: var(--primary-white-color);
+  background-color: var(--btn-color);
+  border-color: var(--btn-color);
+}
+
+.project-list .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project-list .discription {
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--secondary-text-color);
+}
+
+/* Hover and focus for link el */
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
 }
