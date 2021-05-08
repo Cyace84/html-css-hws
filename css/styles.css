@@ -98,6 +98,12 @@ body {
   cursor: pointer;
 }
 
+.hero-btn:hover,
+.hero-btn:focus {
+  color: var(--btn-color);
+  background-color: var(--primary-white-color);
+}
+
 /* Feature section */
 
 .feature-item-title {
