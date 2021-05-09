@@ -37,13 +37,10 @@ body {
 }
 
 .logo {
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-
-  text-decoration: none;
-
   color: var(--accent-color);
 }
 
@@ -122,10 +119,19 @@ body {
 
 /* Team WebStudio */
 
-.team,
-.teammate-name {
+.team {
+  background-color: var(--thirdy-bcg-color);
   font-size: 16px;
   line-height: 1.19;
+}
+
+.teammate {
+  background-color: var(--primary-white-color);
+}
+
+.teammate-name {
+  font-size: inherit;
+  font-weight: 500;
 }
 
 .teammate-profession {
@@ -163,6 +169,9 @@ body {
   font-size: 16px;
   line-height: 1.62;
   cursor: pointer;
+
+  background-color: var(--thirdy-bcg-color);
+  border: none;
 }
 
 .project-filter .btn:hover,
@@ -188,6 +197,8 @@ body {
 /* Hover and focus for link el */
 
 .link:hover,
-.link:focus {
+.link:focus,
+.logo:hover .accent,
+.logo:focus .accent {
   color: var(--accent-color);
 }
