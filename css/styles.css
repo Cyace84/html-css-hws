@@ -175,7 +175,7 @@ body {
 }
 
 .project-filter .btn:hover,
-.project-filter .btn.focus {
+.project-filter .btn:focus {
   color: var(--primary-white-color);
   background-color: var(--btn-color);
   border-color: var(--btn-color);
@@ -198,7 +198,6 @@ body {
 
 .link:hover,
 .link:focus,
-.logo:hover .accent,
-.logo:focus .accent {
+.current {
   color: var(--accent-color);
 }
