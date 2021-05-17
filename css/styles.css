@@ -20,6 +20,8 @@ body {
   background-color: var(--primary-white-color);
 }
 
+/* Global set */
+
 h1,
 h2,
 h3,
@@ -33,9 +35,9 @@ ul {
 }
 
 .container {
+  width: 1230px;
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -46,11 +48,11 @@ ul {
 }
 
 .hidden-title {
-  overflow: hidden;
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   width: 1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -73,6 +75,7 @@ ul {
 
 .title-section {
   padding-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -130,28 +133,31 @@ ul {
 /* Hero section */
 
 .hero {
-  background-color: var(--second-bcg-color);
   color: var(--primary-white-color);
+  background-color: var(--second-bcg-color);
   text-align: center;
 }
 
 .hero-title {
+  min-width: 696px;
   margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  min-width: 696px;
   text-transform: uppercase;
 }
 
 .hero-btn {
   display: inline;
+
   color: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+
   background-color: var(--btn-color);
   cursor: pointer;
   border: none;
@@ -178,10 +184,11 @@ ul {
 }
 
 .feature-item-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .feature-item-text {
@@ -200,10 +207,10 @@ ul {
 
 /* Team WebStudio */
 
-.team {
-  background-color: var(--thirdy-bcg-color);
+.section.team {
   font-size: 16px;
   line-height: 1.19;
+  background-color: var(--thirdy-bcg-color);
 }
 
 .team-list {
@@ -216,6 +223,7 @@ ul {
 
 .teammate {
   padding-bottom: 30px;
+
   text-align: center;
   background-color: var(--primary-white-color);
   border-radius: 0px 0px 4px 4px;
@@ -226,18 +234,20 @@ ul {
   margin-bottom: 30px;
 }
 
-.teammate-name {
+.teammate .name {
   padding-bottom: 10px;
   font-size: inherit;
   font-weight: 500;
 }
 
-.teammate-profession {
+.teammate .profession {
   color: var(--secondary-text-color);
 }
 
 /* Footer */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--second-bcg-color);
 }
 
@@ -246,10 +256,6 @@ ul {
   margin-bottom: 20px;
 }
 
-.footer-container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 .footer-address {
   font-style: normal;
   line-height: 1.71;
@@ -258,10 +264,7 @@ ul {
 .address-list .item:not(:last-child) {
   margin-bottom: 9px;
 }
-.logo-studio-footer {
-  color: var(--primary-white-color);
-}
-
+.logo-studio-footer,
 .physical-address {
   color: var(--primary-white-color);
 }
@@ -276,8 +279,9 @@ ul {
 
 .project-filter {
   display: flex;
-  justify-content: center;
   padding-bottom: 50px;
+
+  justify-content: center;
 }
 
 .project-filter .item:not(:last-child) {
@@ -287,11 +291,12 @@ ul {
 .project-filter .btn {
   min-width: 73px;
   padding: 6px 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  cursor: pointer;
 
+  cursor: pointer;
   background-color: var(--thirdy-bcg-color);
   border: none;
   border-radius: 4px;
@@ -300,6 +305,7 @@ ul {
 .project-filter .btn:hover,
 .project-filter .btn:focus {
   color: var(--primary-white-color);
+
   background-color: var(--btn-color);
   border-color: var(--btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -312,13 +318,6 @@ ul {
   flex-wrap: wrap;
 }
 
-.project-list .content {
-  padding: 20px 24px;
-  border-width: 0px 1px 1px 1px;
-  border-style: solid;
-  border-color: var(--secondary-border-color);
-}
-
 .project-list .item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
@@ -327,8 +326,17 @@ ul {
   margin-bottom: 30px;
 }
 
+.project-list .content {
+  padding: 20px 24px;
+
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: var(--secondary-border-color);
+}
+
 .project-list .title {
   margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
