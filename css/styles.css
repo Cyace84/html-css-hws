@@ -151,6 +151,7 @@ ul {
 
 .hero-btn {
   display: inline;
+  padding: 10px 32px;
 
   color: inherit;
   font-weight: 700;
