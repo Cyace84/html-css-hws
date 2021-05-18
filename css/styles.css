@@ -34,8 +34,12 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 .container {
-  width: 1230px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
@@ -47,13 +51,18 @@ ul {
   padding-bottom: 94px;
 }
 
-.hidden-title {
-  height: 1px;
-  width: 1px;
+.visually-hidden {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
   white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .markers {
@@ -74,7 +83,7 @@ ul {
 }
 
 .title-section {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 
   font-weight: 700;
   font-size: 36px;
@@ -133,15 +142,17 @@ ul {
 /* Hero section */
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   color: var(--primary-white-color);
   background-color: var(--second-bcg-color);
   text-align: center;
 }
 
 .hero-title {
-  min-width: 696px;
-  margin-bottom: 30px;
-
+  max-width: 696px;
+  margin: 0 auto 30px auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -198,6 +209,10 @@ ul {
 }
 
 /* Activities section */
+.activities {
+  padding-top: 0;
+}
+
 .activities-list {
   display: flex;
 }
@@ -223,7 +238,7 @@ ul {
 }
 
 .teammate {
-  padding-bottom: 30px;
+  width: 270px;
 
   text-align: center;
   background-color: var(--primary-white-color);
@@ -231,12 +246,13 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.team-list .photo {
-  margin-bottom: 30px;
+.teammate .content {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .teammate .name {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
   font-size: inherit;
   font-weight: 500;
 }
