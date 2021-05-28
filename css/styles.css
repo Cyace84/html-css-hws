@@ -140,6 +140,22 @@ img {
   align-items: center;
 }
 
+.nav-list .item {
+  position: relative;
+}
+
+.link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .contacts-list {
   color: var(--secondary-text-color);
 }
