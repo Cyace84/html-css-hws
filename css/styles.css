@@ -11,6 +11,13 @@
   --primary-border-color: #ececec;
   --secondary-border-color: #eeeeee;
   --primary-icon-color: #afb1b8;
+
+  --project-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --color-transition: color 250ms var(--project-cubic);
+  --fill-transition: fill 250ms var(--project-cubic);
+  --bcg-color-transition: background-color 250ms var(--project-cubic);
+  --shadow-transition: box-shadow 250ms var(--project-cubic);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -40,6 +47,7 @@ img {
 
 .icon {
   fill: currentColor;
+  transition: var(--bcg-color-transition), var(--fill-transition);
 }
 
 .container {
@@ -76,6 +84,8 @@ img {
 .link {
   color: inherit;
   text-decoration: none;
+
+  transition: var(--color-transition);
 }
 
 .logo {
@@ -152,6 +162,7 @@ img {
 
   width: 100%;
   height: 4px;
+
   background-color: var(--accent-color);
   border-radius: 2px;
 }
@@ -186,6 +197,7 @@ img {
 .hero-title {
   max-width: 696px;
   margin: 0 auto 30px auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -207,6 +219,8 @@ img {
   cursor: pointer;
   border: none;
   border-radius: 4px;
+
+  transition: var(--bcg-color-transition), var(--color-transition);
 }
 
 .hero-btn:hover,
@@ -262,8 +276,30 @@ img {
   display: flex;
 }
 
+.activities-list .item {
+  position: relative;
+}
+
 .activities-list .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.activities-list .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  color: var(--primary-white-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Team WebStudio */
@@ -322,6 +358,7 @@ img {
   height: 44px;
 
   color: var(--primary-icon-color);
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
 }
@@ -330,7 +367,6 @@ img {
 .social-link-list .icon:focus {
   fill: var(--primary-white-color);
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
 
 /* Clients section */
@@ -471,6 +507,40 @@ img {
 
 .project-list .item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.project-list .thumb {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-discription {
+  position: absolute;
+  max-width: 322px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--primary-white-color);
+  opacity: 0;
+}
+
+.project-list .item:hover .overlay-discription {
+  opacity: 1;
+}
+
+.project-list .item:hover .thumb::before {
+  display: block;
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
 }
 
 .project-list .content {
