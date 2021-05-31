@@ -11,6 +11,16 @@
   --primary-border-color: #ececec;
   --secondary-border-color: #eeeeee;
   --primary-icon-color: #afb1b8;
+
+  --project-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --time-transition: 250ms;
+
+  --color-transition: color var(--time-transition) var(--project-cubic);
+  --fill-transition: fill var(--time-transition) var(--project-cubic);
+  --bcg-color-transition: background-color var(--time-transition) var(--project-cubic);
+  --shadow-transition: box-shadow var(--time-transition) var(--project-cubic);
+  --border-color-transition: border-color var(--time-transition) var(--project-cubic);
+  --transform-transition: transform var(--time-transition) var(--project-cubic);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -40,6 +50,7 @@ img {
 
 .icon {
   fill: currentColor;
+  transition: var(--bcg-color-transition), var(--fill-transition);
 }
 
 .container {
@@ -76,6 +87,8 @@ img {
 .link {
   color: inherit;
   text-decoration: none;
+
+  transition: var(--color-transition), var(--border-color-transition);
 }
 
 .logo {
@@ -140,6 +153,23 @@ img {
   align-items: center;
 }
 
+.nav-list .item {
+  position: relative;
+}
+
+.link.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .contacts-list {
   color: var(--secondary-text-color);
 }
@@ -170,6 +200,7 @@ img {
 .hero-title {
   max-width: 696px;
   margin: 0 auto 30px auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -191,6 +222,8 @@ img {
   cursor: pointer;
   border: none;
   border-radius: 4px;
+
+  transition: var(--bcg-color-transition), var(--color-transition);
 }
 
 .hero-btn:hover,
@@ -246,8 +279,30 @@ img {
   display: flex;
 }
 
+.activities-list .item {
+  position: relative;
+}
+
 .activities-list .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.activities-list .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  color: var(--primary-white-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Team WebStudio */
@@ -306,6 +361,7 @@ img {
   height: 44px;
 
   color: var(--primary-icon-color);
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
 }
@@ -314,7 +370,6 @@ img {
 .social-link-list .icon:focus {
   fill: var(--primary-white-color);
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
 
 /* Clients section */
@@ -431,6 +486,9 @@ img {
   background-color: var(--thirdy-bcg-color);
   border: none;
   border-radius: 4px;
+
+  transition: var(--color-transition), var(--bcg-color-transition), var(--shadow-transition),
+    var(--border-color-transition);
 }
 
 .project-filter .btn:hover,
@@ -449,12 +507,72 @@ img {
   flex-wrap: wrap;
 }
 
+.project-list .item {
+  transition: var(--shadow-transition);
+}
+
+.project-list .link {
+  display: block;
+  transition: var(--shadow-transition);
+}
+
 .project-list .item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 
 .project-list .item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.project-list .thumb {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.project-list .thumb-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-list .thumb-overlay::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: var(--transform-transition);
+}
+
+.overlay-discription {
+  position: absolute;
+  transform: translateY(200%);
+
+  max-width: 322px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--primary-white-color);
+
+  transition: var(--transform-transition);
+}
+
+.project-list .item:hover .thumb-overlay::before,
+.project-list .item:hover .overlay-discription,
+.project-list .link:focus .thumb-overlay::before,
+.project-list .link:focus .overlay-discription {
+  transform: translateY(0);
 }
 
 .project-list .content {
@@ -491,4 +609,60 @@ img {
 .link:focus:not(.project-list .link),
 .current {
   color: var(--accent-color);
+}
+
+/* Modal window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--time-transition) var(--project-cubic);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  display: flex;
+  min-width: 528px;
+  min-height: 581px;
+
+  border-radius: 4px;
+  background-color: var(--primary-white-color);
+  transition: var(--transform-transition);
+}
+
+.modal .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-8px, 8px);
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  justify-content: center;
+  align-items: center;
 }
