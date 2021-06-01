@@ -13,7 +13,7 @@
   --primary-icon-color: #afb1b8;
 
   --project-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --time-transition: 2500ms;
+  --time-transition: 250ms;
 
   --color-transition: color var(--time-transition) var(--project-cubic);
   --fill-transition: fill var(--time-transition) var(--project-cubic);
