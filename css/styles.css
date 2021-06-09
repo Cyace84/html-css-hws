@@ -788,6 +788,9 @@ img {
   color: var(--primary-black-color);
   transition: var(--color-transition);
 }
+.form-field.feedback {
+  margin-bottom: 20px;
+}
 
 .form-field.feedback .input {
   padding: 12px 16px;
