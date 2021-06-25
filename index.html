@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -23,9 +23,9 @@
           <a href="./" class="logo page-header__logo link">Web<span class="logo__accent">Studio</span> </a>
           <ul class="site-nav markers">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link site-nav__link--current link">Студия</a>
+              <a id="mainLink" href="./index.html" class="site-nav__link  link">Студия</a>
             </li>
-            <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
+            <li id="portfolioLink" class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
             <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
           </ul>
         </nav>
@@ -33,7 +33,7 @@
         <ul class="contact-list markers">
           <li class="contact-list__item">
             <a href="mailto:info@devstudio.com" class="contact-list__link link">
-              <svg class="contact-list_icon icon" width="16" height="12">
+              <svg class="contact-list__icon icon" width="16" height="12">
                 <use href="./images/icons.svg#mail"></use>
               </svg>
               info@devstudio.com</a
@@ -41,7 +41,7 @@
           </li>
           <li class="contact-list__item">
             <a href="tel:+380961111111" class="contact-list__link link">
-              <svg class="contact-list_icon icon" width="10" height="16">
+              <svg class="contact-list__icon icon" width="10" height="16">
                 <use href="./images/icons.svg#phone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -109,7 +109,7 @@
         </div>
       </section>
       <!-- About our activities -->
-      <section class="work-directions section">
+      <section class="section work-directions">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work-directions-list markers">
@@ -464,6 +464,8 @@
         </form>
       </div>
     </div>
+    <script src="./js/current-page.js"></script>
     <script src="./js/modal.js"></script>
+
   </body>
 </html>

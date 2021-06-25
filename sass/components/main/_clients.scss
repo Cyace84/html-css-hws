@@ -1,0 +1,24 @@
+.client-list {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__icon {
+    @include centeredFlex(flex);
+    width: 170px;
+    height: 92px;
+
+    color: $primary-icon-color;
+    border: 1px solid $primary-icon-color;
+    border-radius: 4px;
+
+    transition: $color-transition, $border-color-transition;
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    border-color: $accent-color;
+  }
+}
