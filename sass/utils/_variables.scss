@@ -1,0 +1,22 @@
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$accent-color: #2196f3;
+$second-bcg-color: #2f303a;
+$thirdy-bcg-color: #f5f4fa;
+$primary-white-color: #ffffff;
+$secondary-white-color: rgba(255, 255, 255, 0.6);
+$primary-black-color: #000000;
+$btn-color: #188ce8;
+$primary-border-color: #ececec;
+$secondary-border-color: #eeeeee;
+$primary-icon-color: #afb1b8;
+
+$project-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$time-transition: 250ms;
+
+$color-transition: color $time-transition $project-cubic;
+$fill-transition: fill $time-transition $project-cubic;
+$bcg-color-transition: background-color $time-transition $project-cubic;
+$shadow-transition: box-shadow $time-transition $project-cubic;
+$border-color-transition: border-color $time-transition $project-cubic;
+$transform-transition: transform $time-transition $project-cubic;

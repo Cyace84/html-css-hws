@@ -1,0 +1,30 @@
+.socials {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__icon {
+    @include centeredFlex(flex);
+    width: 44px;
+    height: 44px;
+
+    color: $primary-icon-color;
+    border-radius: 50%;
+
+    transition: $bcg-color-transition, $fill-transition;
+
+    &--white {
+      color: $primary-white-color;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: $bcg-color-transition;
+    }
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    fill: $primary-white-color;
+    background-color: $accent-color;
+  }
+}
