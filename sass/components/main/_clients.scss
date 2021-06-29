@@ -1,13 +1,41 @@
 .client-list {
   display: flex;
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (max-width: $desktop - 1) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  // @media screen and (min-width: 768px) {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+
+  // @media screen and (min-width: 1140px) {
+  //   margin: -15px;
+  // }
+
+  &__item {
+    @media screen and (max-width: $tablet - 1) {
+      flex-basis: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+      flex-basis: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
 
   &__icon {
     @include centeredFlex(flex);
-    width: 170px;
+    max-width: 210px;
     height: 92px;
 
     color: $primary-icon-color;
@@ -15,6 +43,10 @@
     border-radius: 4px;
 
     transition: $color-transition, $border-color-transition;
+
+    @media screen and (min-width: $desktop) {
+      width: 170px;
+    }
   }
 
   &__icon:hover,

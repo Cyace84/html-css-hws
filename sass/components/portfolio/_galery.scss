@@ -1,19 +1,42 @@
 .project-list {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__item {
     transition: $shadow-transition;
+    @media screen and (max-width: $tablet - 1) {
+      max-width: 450px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+      max-width: 354px;
+      &:nth-child(odd):not(:last-child) {
+        margin-right: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and(min-width: $desktop) {
+      &:not(:nth-child(3n)) {
+        margin-right: 30px;
+      }
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 30px;
+      }
+    }
   }
   &__link {
     display: block;
     transition: $shadow-transition;
-  }
-  &__item:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-  &__item:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
   }
 
   &__item:hover,

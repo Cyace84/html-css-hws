@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -18,36 +18,49 @@
   <body>
     <header class="page-header">
       <div class="container page-header__container">
-        <!-- Navigation -->
-        <nav class="page-header__nav">
-          <a href="./" class="logo page-header__logo link">Web<span class="logo__accent">Studio</span> </a>
-          <ul class="site-nav markers">
-            <li class="site-nav__item">
-              <a id="mainLink" href="./index.html" class="site-nav__link  link">Студия</a>
+        <a href="./" class="logo page-header__logo link">Web<span class="logo__accent">Studio</span> </a>
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-cross"href="./images/icons.svg#icon-cross"></use>
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <!-- Navigation -->
+          <nav class="page-header__nav">
+            <ul class="site-nav markers">
+              <li id="mainLink" class="site-nav__item">
+                <a href="./index.html" class="site-nav__link  link">Студия</a>
+              </li>
+              <li id="portfolioLink" class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a>
+              </li>
+              <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
+            </ul>
+          </nav>
+          <!-- Contacts list -->
+          <ul class="contact-list markers">
+            <li class="contact-list__item">
+              <a href="mailto:info@devstudio.com" class="contact-list__link link">
+                <svg class="contact-list__icon icon" width="16" height="12">
+                  <use href="./images/icons.svg#mail"></use>
+                </svg>
+                info@devstudio.com</a>
             </li>
-            <li id="portfolioLink" class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
-            <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
+            <li class="contact-list__item">
+              <a href="tel:+380961111111" class="contact-list__link link">
+                <svg class="contact-list__icon icon" width="10" height="16">
+                  <use href="./images/icons.svg#phone"></use>
+                </svg>
+                +38 096 111 11 11</a>
+            </li>
           </ul>
-        </nav>
-        <!-- Contacts list -->
-        <ul class="contact-list markers">
-          <li class="contact-list__item">
-            <a href="mailto:info@devstudio.com" class="contact-list__link link">
-              <svg class="contact-list__icon icon" width="16" height="12">
-                <use href="./images/icons.svg#mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contact-list__item">
-            <a href="tel:+380961111111" class="contact-list__link link">
-              <svg class="contact-list__icon icon" width="10" height="16">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="menu-socials markers">
+            <li class="menu-socials__item">Instagram</li>
+            <li class="menu-socials__item">Twitter</li>
+            <li class="menu-socials__item">Facebook</li>
+            <li class="menu-socials__item">LinkedIn</li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -114,15 +127,30 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work-directions-list markers">
             <li class="work-directions-list__item">
-              <img src="./images/box-1.jpg" alt="Человек пишет программный код" width="370" />
+              <img srcset="
+                          ./images/work-dir/box1.jpg 1x,
+                          ./images/work-dir/box1-2x.jpg 2x"
+                          src="./images/work-dir/box1.jpg"
+                          alt="Человек пишет программный код"
+                          width="370"
+              />
               <h3 class="work-directions-list__title">Десктопные приложения</h3>
             </li>
             <li class="work-directions-list__item">
-              <img src="./images/box-2.jpg" alt="Человек работает над мобильным приложением" width="370" />
+              <img srcset="
+                          ./images/work-dir/box2.jpg 1x,
+                          ./images/work-dir/box2-2x.jpg 2x"
+                          src="./images/work-dir/box1.jpg" alt="Человек работает над мобильным приложением" width="370"
+              />
               <h3 class="work-directions-list__title">Мобильные приложения</h3>
             </li>
             <li class="work-directions-list__item">
-              <img src="./images/box-3.jpg" alt="Человек работает над графическим дизайном" width="370" />
+              <img srcset="
+                          ./images/work-dir/box2.jpg 1x,
+                          ./images/work-dir/box2-2x.jpg 2x"
+                          src="./images/work-dir/box1.jpg"
+                          alt="Человек работает над графическим дизайном" width="370"
+              />
               <h3 class="work-directions-list__title">Дизайнерские решения</h3>
             </li>
           </ul>
@@ -134,7 +162,22 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list markers">
             <li class="team-list__item">
-              <img class="team-list__photo" src="./images/ihor.jpg" alt="Игорь Демьяненко" width="270" />
+              <picture>
+                <source srcset="
+                                  ./images/480/ihor.jpg 1x,
+                                  ./images/480/ihor2x.jpg  2x,
+                                " sizes="100wv" media="(max-width: 767px)" />
+                <source srcset="
+                                  ./images/768/ihor.jpg    1x,
+                                  ./images/768/ihor2x.jpg  2x,
+                                " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                <source srcset="
+                                  ./images/1200/ihor.jpg 1x,
+                                  ./images/1200/ihor.jpg 2x,
+                                " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                <img class="team-list__photo" src="./images/ihor.jpg" alt="Игорь Демьяненко" />
+
+              </picture>
               <div class="team-list__meta">
                 <h3 class="team-list__name">Игорь Демьяненко</h3>
                 <p lang="en" class="team-list__profession">Product Designer</p>
@@ -171,7 +214,21 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img class="team-list__photo" src="./images/olha.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source srcset="
+                                                ./images/480/olha.jpg 1x,
+                                                ./images/480/olha2x.jpg  2x,
+                                              " sizes="100wv" media="(max-width: 767px)" />
+                <source srcset="
+                                                ./images/768/olha.jpg    1x,
+                                                ./images/768/olha2x.jpg  2x,
+                                              " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                <source srcset="
+                                                ./images/1200/olha.jpg 1x,
+                                                ./images/1200/olha.jpg 2x,
+                                              " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                <img class="team-list__photo" src="./images/olha.jpg" alt="Ольга Репина" />
+              </picture>
               <div class="team-list__meta">
                 <h3 class="team-list__name">Ольга Репина</h3>
                 <p lang="en" class="team-list__profession">Frontend Developer</p>
@@ -208,7 +265,21 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img class="team-list__photo" src="./images/nikolay.jpg" alt="Николай Тарасов" width="270" />
+              <picture>
+                <source srcset="
+                                                              ./images/480/nikolay.jpg 1x,
+                                                              ./images/480/nikolay2x.jpg  2x,
+                                                            " sizes="100wv" media="(max-width: 767px)" />
+                <source srcset="
+                                                              ./images/768/nikolay.jpg    1x,
+                                                              ./images/768/nikolay2x.jpg  2x,
+                                                            " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                <source srcset="
+                                                              ./images/1200/nikolay.jpg 1x,
+                                                              ./images/1200/nikolay2x.jpg 2x,
+                                                            " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                <img class="team-list__photo" src="./images/olha.jpg" alt="Николай Тарасов" />
+              </picture>
               <div class="team-list__meta">
                 <h3 class="team-list__name">Николай Тарасов</h3>
                 <p lang="en" class="team-list__profession">Marketing</p>
@@ -245,7 +316,23 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img class="team-list__photo" src="./images/michael.jpg" alt="Михаил Ермаков" width="270" />
+              <picture>
+                <source srcset="
+                                                                            ./images/480/michael.jpg 1x,
+                                                                            ./images/480/michael2x.jpg  2x,
+                                                                          " sizes="100wv" media="(max-width: 767px)" />
+                <source srcset="
+                                                                            ./images/768/michael.jpg    1x,
+                                                                            ./images/768/michael2x.jpg  2x,
+                                                                          " sizes="(min-width: 768px) 40vw"
+                  media="(max-width: 1199px)" />
+                <source srcset="
+                                                                            ./images/1200/michael.jpg 1x,
+                                                                            ./images/1200/michael2x.jpg 2x,
+                                                                          " sizes="(min-width: 1200px) 20vw"
+                  media="(min-width: 1200px)" />
+                <img class="team-list__photo" src="./images/olha.jpg" alt="Михаил Ермаков" />
+              </picture>
               <div class="team-list__meta">
                 <h3 class="team-list__name">Михаил Ермаков</h3>
                 <p lang="en" class="team-list__profession">UI Designer</p>
@@ -319,7 +406,7 @@
             </li>
             <li class="client-list__item">
               <a href="#" class="icon client-list__icon link">
-                <svg height="45px">
+                <svg width="106px" height="45px">
                   <use href="./images/icons.svg#client-5"></use>
                 </svg>
               </a>
@@ -466,6 +553,6 @@
     </div>
     <script src="./js/current-page.js"></script>
     <script src="./js/modal.js"></script>
-
+    <script src="./js/menu.js"></script>
   </body>
 </html>

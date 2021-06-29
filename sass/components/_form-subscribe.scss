@@ -1,4 +1,7 @@
 .form-subscribe {
+  @media screen and(max-width: $desktop - 1) {
+    text-align: center;
+  }
   &__title {
     display: block;
     margin-bottom: 20px;
@@ -10,9 +13,10 @@
   }
 
   &__email {
-    width: 358px;
+    width: 100%;
     padding: 15px 16px;
-    margin-right: 12px;
+
+    margin-bottom: 20px;
 
     color: $primary-white-color;
     line-height: 1.25;
@@ -20,6 +24,11 @@
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+
+    @media screen and(min-width: $desktop) {
+      width: 358px;
+      margin-right: 12px;
+    }
   }
 
   &__email::placeholder {

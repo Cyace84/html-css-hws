@@ -1,0 +1,81 @@
+.menu-container {
+  @media screen and (max-width: $tablet - 1) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-120%);
+
+    width: 100%;
+    padding: 48px 40px;
+
+    background-color: $primary-white-color;
+    // opacity: 0;
+    z-index: 50;
+
+    transition: $transform-transition;
+    &.is-open {
+      transform: translateY(0);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    justify-content: space-between;
+
+    align-items: center;
+  }
+}
+
+.menu-socials {
+  // @include centeredFlex();
+  display: none;
+  @media screen and (max-width: $tablet - 1) {
+    display: inline-flex;
+  }
+
+  &__item {
+    font-weight: 500;
+    color: $accent-color;
+    font-size: 18px;
+    line-height: 1.22;
+
+    &:not(:last-child)::after {
+      content: '';
+
+      margin-right: 10px;
+      margin-left: 10px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
