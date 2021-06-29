@@ -20,6 +20,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .icon {
@@ -30,25 +32,21 @@ img {
   list-style: none;
 }
 
-.link {
-  color: inherit;
-  text-decoration: none;
-
-  transition: $color-transition;
-
-  &--accent {
-    color: $accent-color;
-  }
-  &:hover:not(.project-list__link),
-  &:focus:not(.project-list_link) {
-    color: $accent-color;
-  }
-}
-
 .container {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
+
+  @media screen and (min-width: $phone) {
+    width: $phone;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }

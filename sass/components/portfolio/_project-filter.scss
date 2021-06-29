@@ -1,7 +1,23 @@
 .project-filter {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+
+  @media screen and(max-width: $tablet - 1) {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    &__item:first-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media screen and(min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and(min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 
   &__item:not(:last-child) {
     margin-right: 8px;

@@ -1,34 +1,63 @@
 .hero {
   max-width: 1600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
 
   color: $primary-white-color;
 
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/hero-bg.jpg');
+  @include bgImage('480/bg-hero.jpg');
   background-color: $second-bcg-color;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
 
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192px),
+    screen and (min-resolution: 2dppx) {
+    @include bgImage('480/bg-hero@2.jpg');
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    max-width: $desktop;
+    @include bgImage('768/bg-hero.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192px),
+      screen and (min-resolution: 2dppx) {
+      @include bgImage('768/bg-hero2x.jpg');
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    @include bgImage('1200/bg-hero.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192px),
+      screen and (min-resolution: 2dppx) {
+      @include bgImage('1200/bg-hero2x.jpg');
+    }
+  }
+
   &__title {
-    max-width: 696px;
+    max-width: 360px;
     margin: 0 auto 30px auto;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+
+    font-size: 26px;
+    line-height: 1.61;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-  }
 
-  &__button:hover,
-  &__button:focus {
-    color: $btn-color;
-    background-color: $primary-white-color;
-    border: 1px solid $btn-color;
+    @media screen and (min-width: $desktop) {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }

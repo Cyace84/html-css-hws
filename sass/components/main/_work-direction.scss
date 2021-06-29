@@ -1,5 +1,9 @@
 .work-directions {
   padding-top: 0;
+
+  @media screen and (max-width: $desktop - 1) {
+    display: none;
+  }
 }
 
 .work-directions-list {
