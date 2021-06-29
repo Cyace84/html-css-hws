@@ -91,9 +91,6 @@
 
   &__link {
     display: flex;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
-    // align-items: center;
   }
 }
 
@@ -135,7 +132,7 @@
         content: '';
         position: absolute;
         left: 0;
-        bottom: -24px;
+        bottom: -30px;
 
         display: inline-block;
         width: 100%;
@@ -143,6 +140,12 @@
 
         background-color: $accent-color;
         border-radius: 2px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      &::after {
+        bottom: -33px;
       }
     }
   }
