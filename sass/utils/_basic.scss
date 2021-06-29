@@ -31,6 +31,16 @@ img {
 .markers {
   list-style: none;
 }
+.link {
+  color: inherit;
+  text-decoration: none;
+
+  transition: $color-transition;
+
+  &--accent {
+    color: $accent-color;
+  }
+}
 
 .container {
   margin-left: auto;

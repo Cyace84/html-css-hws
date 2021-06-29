@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GoIT HTML+CSS #37: Homeworks">
+    <meta name="keywords" content="HTML, CSS, SCSS, JavaScript">
+    <meta name="author" content="cyace84">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="./css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="./css/main.min.css" />
+    </noscript>
   </head>
   <body>
     <header class="page-header">
@@ -21,7 +20,7 @@
         <a href="./" class="logo page-header__logo link">Web<span class="logo__accent">Studio</span> </a>
         <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
           <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-            <use class="icon-cross"href="./images/icons.svg#icon-cross"></use>
+            <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
             <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
@@ -140,15 +139,15 @@
               <img srcset="
                           ./images/work-dir/box2.jpg 1x,
                           ./images/work-dir/box2-2x.jpg 2x"
-                          src="./images/work-dir/box1.jpg" alt="Человек работает над мобильным приложением" width="370"
+                          src="./images/work-dir/box2.jpg" alt="Человек работает над мобильным приложением" width="370"
               />
               <h3 class="work-directions-list__title">Мобильные приложения</h3>
             </li>
             <li class="work-directions-list__item">
               <img srcset="
-                          ./images/work-dir/box2.jpg 1x,
-                          ./images/work-dir/box2-2x.jpg 2x"
-                          src="./images/work-dir/box1.jpg"
+                          ./images/work-dir/box3.jpg 1x,
+                          ./images/work-dir/box3-2x.jpg 2x"
+                          src="./images/work-dir/box3.jpg"
                           alt="Человек работает над графическим дизайном" width="370"
               />
               <h3 class="work-directions-list__title">Дизайнерские решения</h3>
@@ -163,18 +162,15 @@
           <ul class="team-list markers">
             <li class="team-list__item">
               <picture>
-                <source srcset="
-                                  ./images/480/ihor.jpg 1x,
-                                  ./images/480/ihor2x.jpg  2x,
-                                " sizes="100wv" media="(max-width: 767px)" />
-                <source srcset="
-                                  ./images/768/ihor.jpg    1x,
-                                  ./images/768/ihor2x.jpg  2x,
-                                " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
-                <source srcset="
-                                  ./images/1200/ihor.jpg 1x,
-                                  ./images/1200/ihor.jpg 2x,
-                                " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                <source srcset="./images/480/ihor.jpg 1x,
+                                ./images/480/ihor2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                <source srcset="./images/768/ihor.jpg 1x,
+                                ./images/768/ihor2x.jpg 2x"
+                                media="(max-width: 1199px)" />
+                <source srcset="./images/1200/ihor.jpg 1x,
+                                ./images/1200/ihor.jpg 2x"
+                                media="(min-width: 1200px)" />
                 <img class="team-list__photo" src="./images/ihor.jpg" alt="Игорь Демьяненко" />
 
               </picture>
@@ -215,18 +211,15 @@
             </li>
             <li class="team-list__item">
               <picture>
-                <source srcset="
-                                                ./images/480/olha.jpg 1x,
-                                                ./images/480/olha2x.jpg  2x,
-                                              " sizes="100wv" media="(max-width: 767px)" />
-                <source srcset="
-                                                ./images/768/olha.jpg    1x,
-                                                ./images/768/olha2x.jpg  2x,
-                                              " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
-                <source srcset="
-                                                ./images/1200/olha.jpg 1x,
-                                                ./images/1200/olha.jpg 2x,
-                                              " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                <source srcset="./images/480/olha.jpg 1x,
+                                ./images/480/olha2x.jpg 2x"
+                        media="(max-width: 767px)" />
+                <source srcset="./images/768/olha.jpg 1x,
+                                ./images/768/olha2x.jpg 2x"
+                                media="(max-width: 1199px)" />
+                <source srcset="./images/1200/olha.jpg 1x,
+                                ./images/1200/olha.jpg 2x"
+                              media="(min-width: 1200px)" />
                 <img class="team-list__photo" src="./images/olha.jpg" alt="Ольга Репина" />
               </picture>
               <div class="team-list__meta">
@@ -266,18 +259,15 @@
             </li>
             <li class="team-list__item">
               <picture>
-                <source srcset="
-                                                              ./images/480/nikolay.jpg 1x,
-                                                              ./images/480/nikolay2x.jpg  2x,
-                                                            " sizes="100wv" media="(max-width: 767px)" />
-                <source srcset="
-                                                              ./images/768/nikolay.jpg    1x,
-                                                              ./images/768/nikolay2x.jpg  2x,
-                                                            " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
-                <source srcset="
-                                                              ./images/1200/nikolay.jpg 1x,
-                                                              ./images/1200/nikolay2x.jpg 2x,
-                                                            " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                <source srcset="./images/480/nikolay.jpg 1x,
+                                ./images/480/nikolay2x.jpg  2x"
+                                media="(max-width: 767px)" />
+                <source srcset="./images/768/nikolay.jpg    1x,
+                                ./images/768/nikolay2x.jpg  2x"
+                                media="(max-width: 1199px)" />
+                <source srcset="./images/1200/nikolay.jpg 1x,
+                                ./images/1200/nikolay2x.jpg 2x"
+                                media="(min-width: 1200px)" />
                 <img class="team-list__photo" src="./images/olha.jpg" alt="Николай Тарасов" />
               </picture>
               <div class="team-list__meta">
@@ -317,20 +307,15 @@
             </li>
             <li class="team-list__item">
               <picture>
-                <source srcset="
-                                                                            ./images/480/michael.jpg 1x,
-                                                                            ./images/480/michael2x.jpg  2x,
-                                                                          " sizes="100wv" media="(max-width: 767px)" />
-                <source srcset="
-                                                                            ./images/768/michael.jpg    1x,
-                                                                            ./images/768/michael2x.jpg  2x,
-                                                                          " sizes="(min-width: 768px) 40vw"
-                  media="(max-width: 1199px)" />
-                <source srcset="
-                                                                            ./images/1200/michael.jpg 1x,
-                                                                            ./images/1200/michael2x.jpg 2x,
-                                                                          " sizes="(min-width: 1200px) 20vw"
-                  media="(min-width: 1200px)" />
+                <source srcset="./images/480/michael.jpg 1x,
+                                ./images/480/michael2x.jpg  2x"
+                                media="(max-width: 767px)" />
+                <source srcset="./images/768/michael.jpg    1x,
+                                ./images/768/michael2x.jpg  2x"
+                                media="(max-width: 1199px)" />
+                <source srcset="./images/1200/michael.jpg 1x,
+                                ./images/1200/michael2x.jpg 2x"
+                                media="(min-width: 1200px)" />
                 <img class="team-list__photo" src="./images/olha.jpg" alt="Михаил Ермаков" />
               </picture>
               <div class="team-list__meta">

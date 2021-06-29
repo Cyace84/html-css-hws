@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GoIT HTML+CSS #37: Homeworks">
+    <meta name="keywords" content="HTML, CSS, SCSS, JavaScript">
+    <meta name="author" content="cyace84">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/portfolio.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="./css/portfolio.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="./css/portfolio.min.css" />
+    </noscript>
   </head>
   <body>
     <header class="page-header">
@@ -62,7 +61,7 @@
             <li class="menu-socials__item">LinkedIn</li>
           </ul>
         </div>
-    
+
       </div>
     </header>
     <main>
@@ -90,18 +89,17 @@
                 <div class="project-thumb">
                   <div class="project-thumb__overlay">
                     <picture>
+                      <source srcset="./images/480/technokryak.jpg 1x,
+                                      ./images/480/technokryak2x.jpg 2x
+                                    " media="(max-width: 767px)" />
                       <source srcset="
-                                      ./images/480/technokryak.jpg 1x,
-                                      ./images/480/technokryak2x.jpg  2x,
-                                    " sizes="100wv" media="(max-width: 767px)" />
-                      <source srcset="
-                                      ./images/768/technokryak.jpg    1x,
-                                      ./images/768/technokryak2x.jpg  2x,
-                                    " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                                      ./images/768/technokryak.jpg 1x,
+                                      ./images/768/technokryak2x.jpg 2x
+                                    " media="(max-width: 1199px)" />
                       <source srcset="
                                       ./images/technokryak.jpg 1x,
-                                      ./images/1200/technokryak2x.jpg 2x,
-                                    " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                                      ./images/1200/technokryak2x.jpg 2x
+                                    " media="(min-width: 1200px)" />
                       <img src="./images/technokryak.jpg" alt="Ноутбук с открытой веб страницей" />
 
                     </picture>
@@ -124,16 +122,16 @@
                     <picture>
                       <source srcset="
                                       ./images/480/sport-poster.jpg 1x,
-                                      ./images/480/sport-poster2x.jpg  2x,
-                                      " sizes="100wv" media="(max-width: 767px)" />
+                                      ./images/480/sport-poster2x.jpg 2x
+                                      " media="(max-width: 767px)" />
                       <source srcset="
-                                      ./images/768/sport-poster.jpg    1x,
-                                      ./images/768/sport-poster2x.jpg  2x,
-                                      " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                                      ./images/768/sport-poster.jpg 1x,
+                                      ./images/768/sport-poster2x.jpg 2x
+                                      " media="(max-width: 1199px)" />
                       <source srcset="
                                       ./images/sport-poster.jpg 1x,
-                                      ./images/1200/sport-poster2x.jpg 2x,
-                                      " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                                      ./images/1200/sport-poster2x.jpg 2x
+                                      " media="(min-width: 1200px)" />
                       <img  src="./images/sport-poster.jpg" alt="Двое баскетболистов" />
                     </picture>
                     <p class="project-thumb__overlay-discription">
@@ -155,16 +153,16 @@
                     <picture>
                       <source srcset="
                                       ./images/480/seafood.jpg 1x,
-                                      ./images/480/seafood2x.jpg  2x,
-                                      " sizes="100wv" media="(max-width: 767px)" />
+                                      ./images/480/seafood2x.jpg 2x
+                                    " media="(max-width: 767px)" />
                       <source srcset="
-                                      ./images/768/seafood.jpg    1x,
-                                      ./images/768/seafood2x.jpg  2x,
-                                      " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                                      ./images/768/seafood.jpg 1x,
+                                      ./images/768/seafood2x.jpg 2x
+                                    " media="(max-width: 1199px)" />
                       <source srcset="
                                       ./images/seafood.jpg 1x,
-                                      ./images/1200/seafood2x.jpg 2x,
-                                      " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                                      ./images/1200/seafood2x.jpg 2x
+                                    " media="(min-width: 1200px)" />
                       <img src="./images/seafood.jpg" alt="Логотип ресторана Сифуд" />
                     </picture>
 
@@ -187,16 +185,16 @@
                     <picture>
                       <source srcset="
                                       ./images/480/prime.jpg 1x,
-                                      ./images/480/prime2x.jpg  2x,
-                                      " sizes="100wv" media="(max-width: 767px)" />
+                                      ./images/480/prime2x.jpg 2x
+                                    " media="(max-width: 767px)" />
                       <source srcset="
-                                      ./images/768/prime.jpg    1x,
-                                      ./images/768/prime2x.jpg  2x,
-                                      " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                                      ./images/768/prime.jpg 1x,
+                                      ./images/768/prime2x.jpg 2x
+                                    " media="(max-width: 1199px)" />
                       <source srcset="
                                       ./images/prime.jpg 1x,
-                                      ./images/1200/prime2x.jpg 2x,
-                                      " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                                      ./images/1200/prime2x.jpg 2x
+                                    " media="(min-width: 1200px)" />
                       <img src="./images/prime.jpg" alt="Беспроводные наушники" />
                     </picture>
 
@@ -219,21 +217,18 @@
                     <picture>
                       <source srcset="
                                     ./images/480/boxes.jpg 1x,
-                                    ./images/480/boxes2x.jpg  2x,
+                                    ./images/480/boxes2x.jpg 2x
                                     "
-                              sizes="100wv"
                               media="(max-width: 767px)" />
                       <source srcset="
-                                    ./images/768/boxes.jpg    1x,
-                                    ./images/768/boxes2x.jpg  2x,
+                                    ./images/768/boxes.jpg 1x,
+                                    ./images/768/boxes2x.jpg 2x
                                     "
-                              sizes="(min-width: 768px) 40vw"
                               media="(max-width: 1199px)" />
                       <source srcset="
                                     ./images/boxes.jpg 1x,
-                                    ./images/1200/boxes2x.jpg 2x,
+                                    ./images/1200/boxes2x.jpg 2x
                                     "
-                              sizes="(min-width: 1200px) 20vw"
                               media="(min-width: 1200px)" />
                       <img src="./images/boxes.jpg" alt="Белая и коричневая коробки" />
                     </picture>
@@ -257,21 +252,18 @@
                     <picture>
                       <source srcset="
                                       ./images/480/monitor.jpg 1x,
-                                      ./images/480/monitor2x.jpg  2x,
+                                      ./images/480/monitor2x.jpg 2x
                                       "
-                              sizes="100wv"
                               media="(max-width: 767px)" />
                       <source srcset="
-                                      ./images/768/monitor.jpg    1x,
-                                      ./images/768/monitor2x.jpg  2x,
+                                      ./images/768/monitor.jpg 1x,
+                                      ./images/768/monitor2x.jpg 2x
                                       "
-                              sizes="(min-width: 768px) 40vw"
                               media="(max-width: 1199px)" />
                       <source srcset="
                                       ./images/monitor.jpg 1x,
-                                      ./images/1200/monitor2x.jpg 2x,
+                                      ./images/1200/monitor2x.jpg 2x
                                       "
-                              sizes="(min-width: 1200px) 20vw"
                               media="(min-width: 1200px)" />
                       <img src="./images/monitor.jpg" alt="Экран компьютера" />
                     </picture>
@@ -294,20 +286,19 @@
                     <picture>
                       <source srcset="
                                       ./images/480/limited-edition.jpg 1x,
-                                      ./images/480/limited-edition2x.jpg  2x,
+                                      ./images/480/limited-edition2x.jpg 2x
                                       "
-                              sizes="100wv"
                               media="(max-width: 767px)" />
                       <source srcset="
-                                      ./images/768/limited-edition.jpg    1x,
-                                      ./images/768/limited-edition2x.jpg  2x,
+                                      ./images/768/limited-edition.jpg 1x,
+                                      ./images/768/limited-edition2x.jpg 2x
                                       "
-                              sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                              media="(max-width: 1199px)" />
                       <source srcset="
                                       ./images/limited-edition.jpg 1x,
-                                      ./images/1200/limited-edition2x.jpg 2x,
+                                      ./images/1200/limited-edition2x.jpg 2x
                                       "
-                              sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                             media="(min-width: 1200px)" />
                       <img src="./images/limited-edition.jpg" alt="Открытый журнал" />
                     </picture>
                     <p class="project-thumb__overlay-discription">
@@ -329,19 +320,19 @@
                     <picture>
                       <source srcset="
                                      ./images/480/lab-tag.jpg 1x,
-                                     ./images/480/lab-tag2x.jpg  2x,
-                                     " sizes="100wv" media="(max-width: 767px)" />
+                                     ./images/480/lab-tag2x.jpg 2x
+                                     " media="(max-width: 767px)" />
                       <source srcset="
-                                     ./images/768/lab-tag.jpg    1x,
-                                     ./images/768/lab-tag2x.jpg  2x,
-                                     " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                                     ./images/768/lab-tag.jpg 1x,
+                                     ./images/768/lab-tag2x.jpg 2x
+                                     " media="(max-width: 1199px)" />
                       <source srcset="
                                      ./images/lab-tag.jpg 1x,
-                                     ./images/1200/lab-tag2x.jpg 2x,
-                                     " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
+                                     ./images/1200/lab-tag2x.jpg 2x
+                                     " media="(min-width: 1200px)" />
                       <img src="./images/lab-tag.jpg" alt="Бирка с надписью LAB" />
                     </picture>
-                  
+
                     <p class="project-thumb__overlay-discription">
                       Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                       для цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -361,16 +352,16 @@
                     <picture>
                       <source srcset="
                                       ./images/480/business.jpg 1x,
-                                      ./images/480/business2x.jpg  2x,
-                                      " sizes="100wv" media="(max-width: 767px)" />
+                                      ./images/480/business2x.jpg 2x
+                                      " media="(max-width: 767px)" />
                       <source srcset="
-                                      ./images/768/business.jpg    1x,
-                                      ./images/768/business2x.jpg  2x,
-                                      " sizes="(min-width: 768px) 40vw" media="(max-width: 1199px)" />
+                                      ./images/768/business.jpg 1x,
+                                      ./images/768/business2x.jpg 2x
+                                      " media="(max-width: 1199px)" />
                       <source srcset="
                                       ./images/business.jpg 1x,
-                                      ./images/1200/business2x.jpg 2x,
-                                      " sizes="20vw" media="(min-width: 1200px)" />
+                                      ./images/1200/business2x.jpg 2x
+                                      " media="(min-width: 1200px)" />
                       <img src="./images/business.jpg" alt="Человек работает за ноутбуком" />
                     </picture>
 
