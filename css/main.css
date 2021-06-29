@@ -1120,6 +1120,12 @@ img {
   }
 }
 
+.hero__button:hover, .hero__button:focus {
+  color: #188ce8;
+  background-color: #ffffff;
+  border: 1px solid #188ce8;
+}
+
 @media screen and (min-width: 768px) {
   .feature-list {
     display: -webkit-box;
