@@ -1,0 +1,4 @@
+.link:hover:not(.project-list__link),
+.link:focus:not(.project-list__link) {
+  color: $accent-color;
+}
