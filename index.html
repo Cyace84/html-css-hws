@@ -9,11 +9,10 @@
     <meta name="author" content="cyace84">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
-    <link rel="stylesheet" href="./css/main.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="./css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="./css/main.min.css" />
+    </noscript>
   </head>
   <body>
     <header class="page-header">
@@ -140,15 +139,15 @@
               <img srcset="
                           ./images/work-dir/box2.jpg 1x,
                           ./images/work-dir/box2-2x.jpg 2x"
-                          src="./images/work-dir/box1.jpg" alt="Человек работает над мобильным приложением" width="370"
+                          src="./images/work-dir/box2.jpg" alt="Человек работает над мобильным приложением" width="370"
               />
               <h3 class="work-directions-list__title">Мобильные приложения</h3>
             </li>
             <li class="work-directions-list__item">
               <img srcset="
-                          ./images/work-dir/box2.jpg 1x,
-                          ./images/work-dir/box2-2x.jpg 2x"
-                          src="./images/work-dir/box1.jpg"
+                          ./images/work-dir/box3.jpg 1x,
+                          ./images/work-dir/box3-2x.jpg 2x"
+                          src="./images/work-dir/box3.jpg"
                           alt="Человек работает над графическим дизайном" width="370"
               />
               <h3 class="work-directions-list__title">Дизайнерские решения</h3>

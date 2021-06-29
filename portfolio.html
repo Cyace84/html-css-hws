@@ -9,11 +9,10 @@
     <meta name="author" content="cyace84">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
-    <link rel="stylesheet" href="./css/portfolio.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="./css/portfolio.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="./css/portfolio.min.css" />
+    </noscript>
   </head>
   <body>
     <header class="page-header">
@@ -62,7 +61,7 @@
             <li class="menu-socials__item">LinkedIn</li>
           </ul>
         </div>
-    
+
       </div>
     </header>
     <main>
@@ -341,7 +340,7 @@
                                      " sizes="(min-width: 1200px) 20vw" media="(min-width: 1200px)" />
                       <img src="./images/lab-tag.jpg" alt="Бирка с надписью LAB" />
                     </picture>
-                  
+
                     <p class="project-thumb__overlay-discription">
                       Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                       для цифрового шпионажа и атак на защищённые сервера конкурентов.
