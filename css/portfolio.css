@@ -737,14 +737,9 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .page-header__container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 767px) {
