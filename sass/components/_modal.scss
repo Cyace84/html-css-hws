@@ -31,14 +31,21 @@
   background-color: $primary-white-color;
   transition: $transform-transition;
 
-  @media (max-width: $tablet - 1) {
+  @media screen and(max-width: $phone - 1) {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
+    transform: translate(-50%, -50%) scale(0.9);
     width: 100%;
   }
+
+  // @media (max-width: $tablet - 1) {
+  //   position: absolute;
+  //
+  //   transform: translate(-50%, -50%);
+
+  //   width: 100%;
+  // }
 
   @media screen and(min-width: $desktop) {
     min-width: 528px;

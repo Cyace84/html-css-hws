@@ -597,6 +597,13 @@ body.modal-open {
   overflow: hidden;
 }
 
+@media screen and (max-width: 479px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+}
+
 h1,
 h2,
 h3,

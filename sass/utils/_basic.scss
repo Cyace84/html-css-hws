@@ -10,6 +10,12 @@ body {
   }
 }
 
+@media screen and(max-width: $phone - 1) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+}
 h1,
 h2,
 h3,
